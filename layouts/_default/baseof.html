@@ -60,10 +60,6 @@
 			</div>
 			{{ block "sidebar" . }}{{ partial "sidebar.html" . }}{{ end }}
 		</div>
-		{{- partialCached "header.html" . .Page -}}
-		<main class="main {{- if (eq .Kind `page`) -}}{{- print " post" -}}{{- end -}}">
-			{{- block "main" . }}{{ end }}
-		</main>
 		{{- if .Site.Params.goatcounter }}
 			{{ partial "analytics.html" . -}}
 		{{- end}}
