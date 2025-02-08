@@ -1,5 +1,5 @@
 {{ define "main" }}
-<main class="section list" role="main">
+<main class="main list" role="main">
 	{{- with .Title }}
 	<header class="main__header">
 		<h1 class="main__title">{{ . }}</h1>
@@ -10,9 +10,9 @@
 		{{ . }}
 	</div>
 	{{- end }}
-	{{- range .Paginator.Pages }}
+	{{- range .Pages.Reverse }}
 		{{- .Render "summary" }}
 	{{- end }}
 </main>
-{{ partial "pagination.html" . }}
+<!--{{ partial "pagination.html" . }}-->
 {{ end }}
