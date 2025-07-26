@@ -60,9 +60,6 @@
 			</div>
 			{{ block "sidebar" . }}{{ partial "sidebar.html" . }}{{ end }}
 		</div>
-		{{- if .Site.Params.goatcounter }}
-			{{ partial "analytics.html" . -}}
-		{{- end}}
 		{{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
 	</div>
 <script async defer src="{{ "js/menu.js" | relURL }}"></script>
