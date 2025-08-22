@@ -67,5 +67,8 @@
 <script src="{{ . | relURL }}"></script>
 {{- end }}
 {{- partial "mathjax.html" . -}}
+{{- if .Site.Params.goatcounter}}
+	{{partial "analytics.html"}}
+{{- end}}
 </body>
 </html>
